@@ -8,6 +8,8 @@ import Notifications from "./components/Notifications";
 import Dashboard from "./components/Dashboard";
 import Navigation from "./components/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Profile from "./components/Profile";
+import Report from "./components/Report";
 
 var options = {
   bottom: "64px", // default: '32px'
@@ -31,11 +33,17 @@ function App() {
       <div className="app">
         <Navigation />
         <Switch>
-          <Route path="/home" exact component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/profiles" component={Profiles} />
           <Route path="/reports" component={Reports} />
           <Route path="/notifications" component={Notifications} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route
+            exact
+            path="/search/profiles/:first_name"
+            component={Profile}
+          />
+          <Route exact path="/search/reports/:userId" component={Report} />
         </Switch>
       </div>
     </Router>

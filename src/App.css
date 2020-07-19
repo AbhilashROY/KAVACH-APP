@@ -209,7 +209,17 @@ ul.contact li a {
 }
 
 .button-small {
-  font-size: 16px;
+  display: inline-block;
+  margin: 2em 0em 2em 2em;
+  padding: 5px;
+  background: #6c2a6a;
+  border-radius: 4px;
+  line-height: 1.8em;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #fff;
+  cursor: pointer;
 }
 
 /*********************************************************************************/
@@ -575,6 +585,10 @@ input {
 
 input:focus {
   outline: none;
+}
+
+#profile {
+  font-family: "Times New Roman", Times, serif;
 }
 
 /*********************************************************************************/
