@@ -16,6 +16,7 @@ const SearchReports = (props) => {
         pathname: `/search/reports/${props.rowData.userId}`,
         state: { value: JSON.stringify(props) },
       }}
+      style={{ textDecoration: `none` }}
     >
       <Card style={{ margin: `20px 80px 20px 80px` }}>
         <div className="root">

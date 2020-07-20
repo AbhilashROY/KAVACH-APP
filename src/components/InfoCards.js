@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 75,
     paddingTop: 20,
     textAlign: "center",
-    minHeight: 150,
+    minHeight: 100,
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
@@ -44,7 +44,10 @@ export default function ControlledAccordions() {
             id="panel1bh-header"
           >
             <div className={classes.heading} style={{ paddingLeft: `85px` }}>
-              <span className="icon icon-map-marker"></span>
+              <span
+                className="icon icon-map-marker"
+                style={{ marginBottom: `10px` }}
+              ></span>
               <h3>Heat Map</h3>
             </div>
           </AccordionSummary>
@@ -67,7 +70,10 @@ export default function ControlledAccordions() {
             id="panel2bh-header"
           >
             <div className={classes.heading} style={{ paddingLeft: `100px` }}>
-              <span className="icon icon-check"></span>
+              <span
+                className="icon icon-check"
+                style={{ marginBottom: `10px` }}
+              ></span>
               <h3>Status</h3>
             </div>
           </AccordionSummary>
@@ -91,7 +97,10 @@ export default function ControlledAccordions() {
             id="panel3bh-header"
           >
             <div className={classes.heading}>
-              <span className="icon icon-camera"></span>
+              <span
+                className="icon icon-camera"
+                style={{ marginBottom: `10px` }}
+              ></span>
               <h3>Report Crime</h3>
             </div>
           </AccordionSummary>
@@ -115,7 +124,10 @@ export default function ControlledAccordions() {
             id="panel4bh-header"
           >
             <div className={classes.heading}>
-              <span className="icon icon-warning-sign"></span>
+              <span
+                className="icon icon-warning-sign"
+                style={{ marginBottom: `10px` }}
+              ></span>
               <h3>Panic Button</h3>
             </div>
           </AccordionSummary>
