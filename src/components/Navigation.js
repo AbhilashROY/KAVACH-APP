@@ -29,7 +29,7 @@ function Navigation() {
               exact
               activeClassName="navbar__link--active"
               className="navbar__link"
-              to="/home"
+              to="/"
             >
               <Li>Home</Li>
             </NavLink>
