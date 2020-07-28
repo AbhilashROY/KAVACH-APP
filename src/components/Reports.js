@@ -15,7 +15,7 @@ class Reports extends Component {
 
   /* This is where data will be fetched from */
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((result) => {
         this.setState({
@@ -31,7 +31,7 @@ class Reports extends Component {
 
   render() {
     let filteredReports = this.state.reports.filter((report) => {
-      return report.userId.toString().indexOf(this.state.search) !== -1;
+      return report.id.toString().indexOf(this.state.search) !== -1;
     });
     return (
       <React.Fragment>

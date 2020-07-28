@@ -1,15 +1,14 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function Notifications() {
+  const [property, setProperty] = useState("population");
   return (
     <React.Fragment>
       <div id="wrapper2">
         <div id="welcome" className="container">
-          <div className="title">
-            <h2>Notifications</h2>
-          </div>
+          <h2>Notifications</h2>
         </div>
       </div>
       <div id="wrapper3">

@@ -30,7 +30,7 @@ p {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 20px;
+  padding: 10px;
   z-index: 2;
 }
 
@@ -597,4 +597,25 @@ input:focus {
 
 .contentReports {
   text-align: left;
+}
+
+/*********************************************************************************/
+/* Dashboard                                                    */
+/*********************************************************************************/
+svg {
+  display: block;
+  width: 100%;
+  height: 700px;
+  background-color: rgb(240, 234, 236);
+}
+
+svg .state:hover {
+  stroke: white;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+#selectState {
+  margin: 10px;
+  padding: 5px;
 }

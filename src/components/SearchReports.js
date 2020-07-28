@@ -13,7 +13,7 @@ const SearchReports = (props) => {
   return (
     <Link
       to={{
-        pathname: `/search/reports/${props.rowData.userId}`,
+        pathname: `/search/reports/${props.rowData.id}`,
         state: { value: JSON.stringify(props) },
       }}
       style={{ textDecoration: `none` }}
@@ -22,11 +22,11 @@ const SearchReports = (props) => {
         <div className="root">
           <CardContent className="contentReports">
             <h4>
-              <strong>Title: </strong> {props.rowData.title}
+              <strong>Title: </strong> {props.rowData.company.catchPhrase}
             </h4>
             <h4>
-              <strong>Reported on: </strong> {props.rowData.userId}/
-              {props.rowData.id % 10}/2019
+              <strong>Reported on: </strong> {props.rowData.id}/
+              {props.rowData.id}/2019
             </h4>
             <h4>
               <strong>Active: </strong> false
