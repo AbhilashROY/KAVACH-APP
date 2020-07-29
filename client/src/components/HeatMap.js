@@ -43,7 +43,7 @@ class Heatmap extends Component {
             defaultCenter={{lat: 37,lng: 127}}
             heatmap={heatmapData}
             bootstrapURLKeys={{
-              key: "AIzaSyCO4bWlm05-FqeqtFvrE4TAcYQ2ZBc2SVU",
+              key: process.env.REACT_APP_MAP_KEY,
               libraries: ['visualization'],
             }}
           />
