@@ -6,7 +6,6 @@ import HeatMap from './HeatMap';
 function Home() {
   return (
     <React.Fragment>
-      
       <div id="wrapper2">
         <div id="welcome" className="container">
           <div className="title">

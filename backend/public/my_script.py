@@ -34,7 +34,7 @@ def women():
 	regressor = LinearRegression()		#regression algorithm cealled.
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Predictions.
-	print (accuracy)
+	# print (accuracy)
 	accuracy_max = 0.65
 
 	#Trending year(Influence Year) finding algorithm.
@@ -85,6 +85,7 @@ def women():
 	if C_type == "ASSAULT ON WOMEN WITH INTENT TO OUTRAGE HER MODESTY":
 		C_type = "ASSAULT ON WOMEN"
 	#Finally the template is rendered
+	print (accuracy)
 	print(msg)
 	print(state)
 	print(year)
@@ -123,7 +124,7 @@ def children():
 	regressor = LinearRegression()		#regression Algorithm Called.
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Prdictions.
-	print (accuracy)
+	# print (accuracy)
 	accuracy_max = 0.65
 	if(accuracy < 0.65):
 		for a in range(3,l-4):
@@ -171,6 +172,7 @@ def children():
 		y = list(y)
 		yearLable = list(b)
 		msg = ""
+	print (accuracy)
 	print(msg)
 	print(state)
 	print(year)
@@ -209,7 +211,7 @@ def ipc():
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Prdictions.
 
-	print (accuracy)
+	# print (accuracy)
 	accuracy_max = 0.65
 
 	#Trending year(Influence Year) finding algorithm.
@@ -258,6 +260,7 @@ def ipc():
 		y = list(y)
 		yearLable = list(b)
 		msg = ""
+	print (accuracy)
 	print(msg)
 	print(state)
 	print(year)
@@ -296,7 +299,7 @@ def sll():
 	regressor = LinearRegression()		#regression Algorithm Called.
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Prdictions.
-	print (accuracy)
+	# print (accuracy)
 	accuracy_max = 0.65
 
 	#Trending year(Influence Year) finding algorithm.
@@ -345,6 +348,7 @@ def sll():
 		y = list(y)
 		yearLable = list(b)
 		msg = ""
+	print (accuracy)
 	print(msg)
 	print(state)
 	print(year)
