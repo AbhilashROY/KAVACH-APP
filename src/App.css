@@ -399,6 +399,7 @@ ul.contact li a {
 
 #portfolio {
   padding-top: 8em;
+  text-align: center;
 }
 
 #portfolio .box {
@@ -605,8 +606,14 @@ input:focus {
 svg {
   display: block;
   width: 100%;
-  height: 700px;
+  height: 600px;
   background-color: rgb(240, 234, 236);
+  border: 0.2px solid rgb(223, 221, 221);
+}
+
+svg .state {
+  stroke: white;
+  stroke-width: 1px;
 }
 
 svg .state:hover {
@@ -618,4 +625,18 @@ svg .state:hover {
 #selectState {
   margin: 10px;
   padding: 5px;
+}
+
+svg .label1,
+.label2 {
+  font-weight: bold;
+}
+
+svg .label3 {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.dashboardSearchBar {
+  margin-bottom: 100px;
 }
