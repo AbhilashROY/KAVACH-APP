@@ -21,7 +21,7 @@ class Graph extends Component {
       timeseriesDs: {
         type: "timeseries",
         renderAt: "container",
-        width: "800",
+        width: "1000",
         height: "615",
         dataSource: {
           caption: { text: "Number of Crimes in State" },

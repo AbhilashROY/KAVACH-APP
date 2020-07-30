@@ -18,6 +18,7 @@ function GeoChart({ data, property }) {
   const [selectedState, setSelectedState] = useState(null);
   const [selectedStateForInfo, setSelectedStateForInfo] = useState(null);
   let color = ["#C2DFFF", " #95B9C7", "#6960EC", "#151B54", "#646D7E"];
+  const selectedColor = ["#FF6347"];
   // will be called initially and on every data change
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -67,6 +68,22 @@ function GeoChart({ data, property }) {
       })
       .attr("d", (feature) => pathGenerator(feature));
 
+    svg
+      .selectAll(".state2")
+      .data([selectedStateForInfo])
+      .join("path")
+      .on("click", (feature) => {
+        setSelectedStateForInfo(
+          selectedStateForInfo === feature ? null : feature
+        );
+        clickHandler(feature, selectedStateForInfo);
+      })
+      .attr("class", "state2")
+      .transition()
+      .style("fill", function () {
+        return selectedColor[0];
+      })
+      .attr("d", (feature) => pathGenerator(feature));
     // render text
     svg
       .selectAll(".label1")
