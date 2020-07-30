@@ -26,6 +26,7 @@
     "react-chartjs-2": "*",
     "react-dom": "*",
     "react-fusioncharts": "*",
+    "react-loading": "^2.0.3",
     "react-router-dom": "*",
     "react-scripts": "*",
     "styled-components": "*",

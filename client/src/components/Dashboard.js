@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LineDemo from './LineDemo';
 import "../App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -61,6 +62,11 @@ const Nav = styled.nav`
 function Dashboard() {
   const [property, setProperty] = useState("population");
   const [open, setOpen] = useState(false);
+  const styles = {
+    fontFamily: 'sans-serif',
+    textAlign: 'center',
+  };
+  
   return (
     <React.Fragment>
       <div id="wrapper2">
@@ -86,6 +92,9 @@ function Dashboard() {
         </Nav>
       </div>
       <GeoChart data={data} property={property} />
+      <div style={styles}>
+        <LineDemo/>
+      </div>
     </React.Fragment>
   );
 }
