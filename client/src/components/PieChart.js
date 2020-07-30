@@ -6,8 +6,8 @@ class PieChart extends Component {
   render() {
     const total = 2381160;
     const options = {
-      exportEnabled: true,
       animationEnabled: true,
+      animationDuration: 2000,
       title: {
         text: "Different Crimes in the year 2017",
       },
@@ -68,9 +68,7 @@ class PieChart extends Component {
       ],
     };
 
-    return (
-      <CanvasJSChart options={options} onRef={(ref) => (this.chart = ref)} />
-    );
+    return <CanvasJSChart options={options} />;
   }
 }
 

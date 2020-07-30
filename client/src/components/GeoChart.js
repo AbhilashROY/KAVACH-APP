@@ -18,7 +18,7 @@ function GeoChart({ data, property }) {
   const [selectedState, setSelectedState] = useState(null);
   const [selectedStateForInfo, setSelectedStateForInfo] = useState(null);
   let color = ["#C2DFFF", " #95B9C7", "#6960EC", "#151B54", "#646D7E"];
-  const selectedColor = ["#FF6347"];
+  const selectedColor = ["#FF6347", "#FFFFFF"];
   // will be called initially and on every data change
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -35,7 +35,7 @@ function GeoChart({ data, property }) {
 
     const pathGenerator = geoPath().projection(projection);
     const clickHandler = (d, e) => {
-      history.push(`/dashboard/${d.properties.name}`);
+      if (d !== null) history.push(`/dashboard/${d.properties.name}`);
       if (d === e) history.push(`/dashboard`);
       else {
         myref.current.scrollIntoView({

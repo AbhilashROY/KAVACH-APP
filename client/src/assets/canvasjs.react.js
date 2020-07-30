@@ -13,7 +13,6 @@ class CanvasJSChart extends React.Component {
           width: "530px",
           position: "relative",
           marginLeft: `30px`,
-          float: `left`,
         };
     this.containerProps.height =
       props.containerProps && props.containerProps.height
@@ -33,7 +32,7 @@ class CanvasJSChart extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     //Check if Chart-options has changed and determine if component has to be updated
-    return !(nextProps.options === this.options);
+    return nextProps.options === this.options;
   }
   componentDidUpdate() {
     //Update Chart Options & Render

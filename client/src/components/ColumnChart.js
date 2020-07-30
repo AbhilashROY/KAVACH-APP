@@ -10,6 +10,7 @@ class ColumnChart extends Component {
       },
       dataPointWidth: 30,
       animationEnabled: true,
+      animationDuration: 2000,
       data: [
         {
           // Change type to "doughnut", "line", "splineArea", etc.
