@@ -5,7 +5,7 @@ import numpy as np
 from flask import json
 from sklearn import preprocessing
 from sklearn.linear_model import LinearRegression
-from sklearn.externals import joblib
+import joblib
 from sklearn.ensemble import RandomForestRegressor
 from plotly.offline import init_notebook_mode, iplot
  
