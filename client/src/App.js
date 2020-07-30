@@ -10,7 +10,8 @@ import Navigation from "./components/Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Profile from "./components/Profile";
 import Report from "./components/Report";
-
+import Predictions from "./components/Predictions";
+import HeatMap from "./components/HeatMap";
 var options = {
   bottom: "64px", // default: '32px'
   right: "unset", // default: '32px'
@@ -44,6 +45,8 @@ function App() {
             component={Profile}
           />
           <Route exact path="/search/reports/:userId" component={Report} />
+          <Route path="/heatmap" exact component={HeatMap} />
+          <Route path="/predictions" exact component={Predictions} />
         </Switch>
       </div>
     </Router>
