@@ -69,21 +69,10 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       property1: "population",
-      property2: "name",
     };
   }
 
   render() {
-    /* const states = this.state.reports
-      .map((report) => report.State)
-      .filter((State, index, array) => array.indexOf(State) === index);
-
-    const counts = states.map((st) => ({
-      stateName: st,
-      count: this.state.reports.filter((report) => report.State === st).length,
-    }));
-
-    console.log(counts);*/
     return (
       <React.Fragment>
         {/* <div id="wrapper2">
@@ -121,11 +110,7 @@ class Dashboard extends Component {
           </Nav>
         </div>
 
-        <GeoChart
-          data={data}
-          property={this.state.property1}
-          property2={this.state.property2}
-        />
+        <GeoChart data={data} property={this.state.property1} />
       </React.Fragment>
     );
   }
