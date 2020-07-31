@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import image1 from "../images/cop_lady.jpg";
+import image1 from "../images/cop3.jpg";
 import {
   Link,
   Route,

@@ -2,18 +2,18 @@ import React from "react";
 import InfoCards from "./InfoCards";
 import "../App.css";
 import "../fonts.css";
-import HeatMap from './HeatMap';
+import HeatMap from "./HeatMap";
 function Home() {
   return (
     <React.Fragment>
       <div id="wrapper2">
         <div id="welcome" className="container">
           <div className="title">
-            <h2>Welcome to our website</h2>
+            <h2>A real-time crime reporting platform</h2>
           </div>
           <p>
-            This is <strong>Kavach</strong>, a free, fully standards-compliant
-            application for rea-time crime reporting.
+            This is <strong>Kavach</strong>, here you can receive real time media 
+            of the crime scene and it gives you critical insights about the criminal topology of different regions.
           </p>
         </div>
       </div>
@@ -45,7 +45,6 @@ function Home() {
           </li>
         </ul>
       </div>
-      <HeatMap/>
     </React.Fragment>
   );
 }

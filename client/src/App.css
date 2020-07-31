@@ -29,6 +29,10 @@ p {
 .profileNavBar {
   position: -webkit-sticky;
   position: sticky;
+  background-color: #4a4349;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white;
   top: 0;
   padding: 10px;
   z-index: 2;
@@ -209,10 +213,35 @@ ul.contact li a {
 }
 
 .button-small {
+    display: inline-block;
+    margin: 2em 0em 2em 2em;
+    height: 50px;
+    width: 150px;
+    padding: 5px;
+    background: #6c2a6a;
+    border: 1px solid #862a54;
+    border-radius: 4px;
+    line-height: 1.8em;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button-small:hover {
+  background: #862a54;
+  border: 1px solid #6c2a6a;
+}
+
+.button-small1 {
   display: inline-block;
   margin: 2em 0em 2em 2em;
+  height: 40px;
+  width: 120px;
   padding: 5px;
-  background: #6c2a6a;
+  background: #2c003e;
+  border: 1px solid #17011a;
   border-radius: 4px;
   line-height: 1.8em;
   text-decoration: none;
@@ -221,6 +250,7 @@ ul.contact li a {
   color: #fff;
   cursor: pointer;
 }
+
 
 /*********************************************************************************/
 /* Heading Titles                                                                */
@@ -306,7 +336,7 @@ ul.contact li a {
 
 #wrapper3 {
   overflow: hidden;
-  padding: 0em 0em 8em 0em;
+  padding: 1em 0em 8em 1em;
   background: rgb(240, 234, 236);
 }
 
@@ -318,6 +348,16 @@ ul.contact li a {
 /*********************************************************************************/
 /* Welcome                                                                       */
 /*********************************************************************************/
+#welprof {
+  overflow: hidden;
+    width: 80%;
+    height: 300px;
+    margin: 4em 4em;
+    padding: 4em 50px 4em 50px;
+    text-align: center;
+    color: black;
+    box-shadow: 3px 5px 10px 4px #6a4670;
+}
 
 #welcome {
   overflow: hidden;
@@ -454,6 +494,21 @@ ul.contact li a {
 
 .column4 {
   float: right;
+}
+
+.column1a {
+  float: left;
+  height: 275px;
+  width: 25%;
+}
+
+.column2a {
+  float: right;
+  padding: 20px;
+  height: 275px;
+  text-align: left;
+  background-color: #f3dfe3;
+  width: 65%;
 }
 
 /*********************************************************************************/
@@ -649,14 +704,24 @@ svg .label3 {
 
 .menuList {
   padding: 16px;
+  margin: 0px 20px;
   color: white;
-  background-color: #917b8d;
+  background-color: #4a4349;
+  /* background-color: #917b8d; */
   transition: 0.5s ease-in-out;
-  font-size: 20px;
-  border-top: 0.01px solid #b49aaf;
+  font-size: 24px;
+  border-top: 0.01px solid #4a4349;
+  /* border-top: 0.01px solid #b49aaf; */
 }
 
 .menuList:hover {
   background-color: #e6dde7;
   color: black;
+}
+
+/****************************************
+Profile
+****************************************/
+.desc {
+  margin: 5px 0px;
 }

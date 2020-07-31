@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchProfile from "./SearchProfile";
-import axios from 'axios';
+import axios from "axios";
 class Profiles extends Component {
   constructor() {
     super();
@@ -25,16 +25,14 @@ class Profiles extends Component {
     //       cops: result.data,
     //     });
     //   });
-    axios.get("https://www.balldontlie.io/api/v1/players")
-    .then(result => {
+    axios.get("https://www.balldontlie.io/api/v1/players").then((result) => {
       // console.log(result);
       this.setState({
         isLoaded: true,
-        cops: result.data.data
-      })
-    })
-    axios.get("http://localhost:5000")
-    .then(res => console.log(res.data));
+        cops: result.data.data,
+      });
+    });
+    axios.get("http://localhost:5000").then((res) => console.log(res.data));
   }
 
   updateSearch(event) {
@@ -77,12 +75,8 @@ class Profiles extends Component {
 
     return (
       <React.Fragment>
-        <div id="wrapper2" className="profileNavBar">
-          <div className="container">
-            <div>
-              <h1>Profiles</h1>
-            </div>
-          </div>
+        <div className="profileNavBar">
+          <h1>Profiles</h1>
         </div>
 
         <div id="search-wrapper">
@@ -93,12 +87,12 @@ class Profiles extends Component {
               value={this.state.search}
               onChange={this.updateSearch.bind(this)}
             />
-            <button className="button-small" onClick={this.handleFlagByName}>
+            <a className="button-small" onClick={this.handleFlagByName}>
               By Name
-            </button>
-            <button className="button-small" onClick={this.handleFlagByStation}>
+            </a>
+            <a className="button-small" onClick={this.handleFlagByStation}>
               By Station
-            </button>
+            </a>
           </div>
           {filteredCops.map((cop) => (
             <SearchProfile

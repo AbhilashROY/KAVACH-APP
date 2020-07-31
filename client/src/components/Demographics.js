@@ -8,8 +8,8 @@ const Demographics = (props) => {
   return (
     <React.Fragment>
       <div id="wrapper3">
+        <h1 style={{ textTransform: `uppercase` }}>{state}</h1>
         <div id="portfolio" className="container">
-          <h2>{state}</h2>
           <div style={({ margin: `30px` }, { float: `right` })}>
             <select style={{ padding: `5px` }}>
               <option value="All Crimes">All Crimes</option>
