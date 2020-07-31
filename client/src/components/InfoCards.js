@@ -53,7 +53,7 @@ export default function ControlledAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Analysis of crime patterns based on heat map.
+              Heat-map to analyze intensity of crimes in various regions.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -106,8 +106,8 @@ export default function ControlledAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Images and videos of evidence/crime scene, voice reports and live
-              locations.
+              Receive images, videos and voice-notes of evidence/crime scene. Check crime scene description.
+              Dont just be a witness, be responsible too. 
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -133,7 +133,7 @@ export default function ControlledAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              To get help during emergency situations or potential danger.
+              Share your live location with your chosen contacts in case of emergencies.
             </Typography>
           </AccordionDetails>
         </Accordion>

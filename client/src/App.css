@@ -29,6 +29,10 @@ p {
 .profileNavBar {
   position: -webkit-sticky;
   position: sticky;
+  background-color: #4a4349;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white;
   top: 0;
   padding: 10px;
   z-index: 2;
