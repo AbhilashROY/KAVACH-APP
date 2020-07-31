@@ -14,22 +14,36 @@ class Reports extends Component {
   }
 
   /* This is where data will be fetched from */
-  componentDidMount() {
-    // fetch("https://jsonplaceholder.typicode.com/posts")
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     this.setState({
-    //       isLoaded: true,
-    //       reports: result,
-    //     });
-    //   });
-    axios.get("https://jsonplaceholder.typicode.com/posts").then((result) => {
-      // console.log(result);
-      this.setState({
-        isLoaded: true,
-        reports: result.data,
-      });
+
+  getUserData = async () => {
+    try {
+      const { data } = await axios.get(
+        `https://kavach-f5931.firebaseio.com/reports.json`
+      );
+      console.log(data);
+      return data;
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  json2array = (json) => {
+    let result = [];
+    let keys = Object.keys(json);
+    keys.forEach(function (key) {
+      result.push(json[key]);
     });
+    return result;
+  };
+
+  async componentDidMount() {
+    const report = await this.getUserData();
+    console.log(report);
+    this.setState({
+      isLoaded: true,
+      reports: this.json2array(report),
+    });
+    console.log("set");
   }
 
   updateSearch(event) {
@@ -37,8 +51,10 @@ class Reports extends Component {
   }
 
   render() {
+    console.log(90);
+    console.log(this.state.reports);
     let filteredReports = this.state.reports.filter((report) => {
-      return report.userId.toString().indexOf(this.state.search) !== -1;
+      return report.timestamp.toString().indexOf(this.state.search) !== -1;
     });
     return (
       <React.Fragment>
@@ -56,7 +72,7 @@ class Reports extends Component {
             />
           </div>
           {filteredReports.map((report) => (
-            <SearchReports key={report.id} rowData={report} />
+            <SearchReports key={report.report_id} rowData={report} />
           ))}
         </div>
 
