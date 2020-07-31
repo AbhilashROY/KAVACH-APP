@@ -55,7 +55,7 @@ export default class LineDemo extends Component {
       justifyContent: "center",
       alignItems: "center",
       textAlign: 'center',
-      margin: '0% 45%'
+      margin: '0% 45%',
     };
 
   render() {
