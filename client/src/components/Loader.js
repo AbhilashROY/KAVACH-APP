@@ -8,14 +8,14 @@ export default class Loader extends Component {
         super(props);  
         this.state = { 
             type : "spinningBubbles",
-            color : "blue"
+            color : "black"
          };  
     }  
 
     render() {
         return(
             
-            <div>
+            <div className= "Loader">
                 <ReactLoading type={this.state.type} color={this.state.color} height={150} width={150} />
             </div>
 
