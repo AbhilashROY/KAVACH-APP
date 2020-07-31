@@ -19,6 +19,7 @@
     "downshift": "*",
     "fusioncharts": "*",
     "google-map-react": "*",
+    "hashmap": "^2.4.0",
     "https": "*",
     "mdbreact": "*",
     "prop-types": "*",

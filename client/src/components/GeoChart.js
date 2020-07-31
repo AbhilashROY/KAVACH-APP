@@ -4,12 +4,13 @@ import useResizeObserver from "./useResizeObserver";
 import "../App.css";
 import { Router, Route, useHistory } from "react-router-dom";
 import Demographics from "./Demographics";
+import axios from "axios";
 
 /**
  * Component that renders a map of Germany.
  */
 
-function GeoChart({ data, property }) {
+function GeoChart({ data, property, property2 }) {
   const history = useHistory({ forceRefresh: true });
   const svgRef = useRef();
   const wrapperRef = useRef();
@@ -17,18 +18,32 @@ function GeoChart({ data, property }) {
   const dimensions = useResizeObserver(wrapperRef);
   const [selectedState, setSelectedState] = useState(null);
   const [selectedStateForInfo, setSelectedStateForInfo] = useState(null);
+  const [reports, setReports] = useState([]);
+  const [counts, setCounts] = useState([]);
   let color = ["#C2DFFF", " #95B9C7", "#6960EC", "#151B54", "#646D7E"];
   const selectedColor = ["#FF6347", "#FFFFFF"];
-  // will be called initially and on every data change
+
   useEffect(() => {
     const svg = select(svgRef.current);
+    const json2array = (json) => {
+      let result = [];
+      let keys = Object.keys(json);
+      keys.forEach(function (key) {
+        result.push(json[key]);
+      });
+      return result;
+    };
 
-    // use resized dimensions
-    // but fall back to getBoundingClientRect, if no dimensions yet.
+    axios({
+      method: "GET",
+      url: `https://kavach-f5931.firebaseio.com/reports.json`,
+    }).then((res) => {
+      setReports(json2array(res.data));
+    });
+
     const { width, height } =
       dimensions || wrapperRef.current.getBoundingClientRect();
 
-    // projects geo-coordinates on a 2D plane
     const projection = geoMercator()
       .fitSize([width, height], selectedStateForInfo || data)
       .precision(100);
@@ -109,6 +124,23 @@ function GeoChart({ data, property }) {
       )
       .attr("x", 10)
       .attr("y", 45);
+
+    svg
+      .selectAll(".label4")
+      .data([selectedState])
+      .join("text")
+      .attr("class", "label4")
+      .text((feature) => {
+        let count = 0;
+        if (feature !== null) {
+          reports.map((report) => {
+            if (report.State === feature.properties.name) count++;
+          });
+        }
+        return feature && "Crime: " + count.toLocaleString();
+      })
+      .attr("x", 10)
+      .attr("y", 65);
 
     svg
       .selectAll(".label3")

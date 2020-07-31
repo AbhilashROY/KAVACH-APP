@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import "../App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -59,18 +59,34 @@ const Nav = styled.nav`
   transition: 0.5s ease-in-out;
 `;
 
-function Dashboard() {
-  const [property, setProperty] = useState("population");
-  const [open, setOpen] = useState(false);
- 
-  const ulstyle = {
-    display: 'inline-flex',
-    margin: '0',
+const ulstyle = {
+  display: "inline-flex",
+  margin: "0",
+};
+
+class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      property1: "population",
+      property2: "name",
+    };
   }
 
-  return (
-    <React.Fragment>
-      {/* <div id="wrapper2">
+  render() {
+    /* const states = this.state.reports
+      .map((report) => report.State)
+      .filter((State, index, array) => array.indexOf(State) === index);
+
+    const counts = states.map((st) => ({
+      stateName: st,
+      count: this.state.reports.filter((report) => report.State === st).length,
+    }));
+
+    console.log(counts);*/
+    return (
+      <React.Fragment>
+        {/* <div id="wrapper2">
         <Menu open={open}>
           <Link to="/predictions" style={{ textDecoration: "none" }}>
             <li className="menuList">Predictions</li>
@@ -92,23 +108,27 @@ function Dashboard() {
           </StyledBurger>
         </Nav>
       </div> */}
-      <div  id="wrapper2">
-        <Nav>
-          <ul style = {ulstyle}>
-            <Link to="/predictions" style={{ textDecoration: "none" }}>
+        <div id="wrapper2">
+          <Nav>
+            <ul style={ulstyle}>
+              <Link to="/predictions" style={{ textDecoration: "none" }}>
                 <li className="menuList">Predictions</li>
-            </Link>
-            <Link to="/heatmap" style={{ textDecoration: "none" }}>
+              </Link>
+              <Link to="/heatmap" style={{ textDecoration: "none" }}>
                 <li className="menuList">Heatmap</li>
-            </Link>     
-          </ul>
-        </Nav>
-      </div>
+              </Link>
+            </ul>
+          </Nav>
+        </div>
 
-      <GeoChart data={data} property={property} />
-      
-    </React.Fragment>
-  );
+        <GeoChart
+          data={data}
+          property={this.state.property1}
+          property2={this.state.property2}
+        />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Dashboard;

@@ -214,21 +214,20 @@ ul.contact li a {
 }
 
 .button-small {
-    display: inline-block;
-    margin: 2em 0em 2em 2em;
-    text-align: center;
-    height: 40px;
-    width: 150px;
-    padding: 5px;
-    background: #6c2a6a;
-    border: 1px solid #862a54;
-    border-radius: 4px;
-    line-height: 1.8em;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
+  display: inline-block;
+  margin: 2em 0em 2em 2em;
+  height: 50px;
+  width: 150px;
+  padding: 5px;
+  background: #6c2a6a;
+  border: 1px solid #862a54;
+  border-radius: 4px;
+  line-height: 1.8em;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #fff;
+  cursor: pointer;
 }
 
 .button-small:hover {
@@ -252,7 +251,6 @@ ul.contact li a {
   color: #fff;
   cursor: pointer;
 }
-
 
 /*********************************************************************************/
 /* Heading Titles                                                                */
@@ -352,13 +350,13 @@ ul.contact li a {
 /*********************************************************************************/
 #welprof {
   overflow: hidden;
-    width: 80%;
-    height: 300px;
-    margin: 4em 4em;
-    padding: 4em 50px 4em 50px;
-    text-align: center;
-    color: black;
-    box-shadow: 3px 5px 10px 4px #6a4670;
+  width: 80%;
+  height: 300px;
+  margin: 4em 4em;
+  padding: 4em 50px 4em 50px;
+  text-align: center;
+  color: black;
+  box-shadow: 3px 5px 10px 4px #6a4670;
 }
 
 #welcome {
@@ -653,7 +651,7 @@ input:focus {
 /*********************************************************************************/
 
 .reportRoot {
-  max-height: 120px;
+  max-height: 130px;
   background: white;
   display: flex;
 }
@@ -669,7 +667,8 @@ input:focus {
 }
 
 .spacing {
-  padding: 5px;
+  padding: 10px;
+  float: left;
 }
 
 .reportHead {
@@ -680,6 +679,12 @@ input:focus {
   color: white;
   padding: 10px 20px 0px 20px;
 }
+
+.space {
+  min-width: 350px;
+  float: left;
+}
+
 .flex-container {
   margin: 0px auto;
   width: 1200px;
@@ -738,7 +743,8 @@ svg .state:hover {
 }
 
 svg .label1,
-.label2 {
+.label2,
+.label4 {
   font-weight: bold;
 }
 
