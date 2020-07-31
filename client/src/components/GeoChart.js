@@ -6,11 +6,7 @@ import { Router, Route, useHistory } from "react-router-dom";
 import Demographics from "./Demographics";
 import axios from "axios";
 
-/**
- * Component that renders a map of Germany.
- */
-
-function GeoChart({ data, property, property2 }) {
+function GeoChart({ data, property }) {
   const history = useHistory({ forceRefresh: true });
   const svgRef = useRef();
   const wrapperRef = useRef();
@@ -19,9 +15,9 @@ function GeoChart({ data, property, property2 }) {
   const [selectedState, setSelectedState] = useState(null);
   const [selectedStateForInfo, setSelectedStateForInfo] = useState(null);
   const [reports, setReports] = useState([]);
-  const [counts, setCounts] = useState([]);
-  let color = ["#C2DFFF", " #95B9C7", "#6960EC", "#151B54", "#646D7E"];
+  let color = ["#120a8f", " #95B9C7", "#6960EC", "#151B54", "#646D7E"];
   const selectedColor = ["#FF6347", "#FFFFFF"];
+  let i = 0;
 
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -79,7 +75,8 @@ function GeoChart({ data, property, property2 }) {
       .attr("class", "state")
       .transition()
       .style("fill", function (d) {
-        return color[Math.floor(Math.random() * 5)];
+        i++;
+        return color[i % 5];
       })
       .attr("d", (feature) => pathGenerator(feature));
 
