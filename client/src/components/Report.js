@@ -10,15 +10,14 @@ const Report = (props) => {
             <div className="column2">
               <h5>
                 <strong>Title: </strong>
-                {obj.rowData.first_name} {obj.rowData.title}
+                {obj.rowData.crime_type}
               </h5>
               <br />
               <h5>
-                <strong>Reported on: </strong> {obj.rowData.userId}/
-                {obj.rowData.id % 10}/2019
+                <strong>Reported on: </strong> {obj.rowData.timestamp}
               </h5>
               <h5>
-                <strong>Report Category</strong>
+                <strong>Description:</strong> {obj.rowData.description}
               </h5>
             </div>
             <div className="column4">
@@ -27,11 +26,11 @@ const Report = (props) => {
               </h5>
 
               <h5>
-                <strong>Victim Phone Number: </strong> 5463473
+                <strong>Victim Phone Number: </strong>
               </h5>
 
               <h5>
-                <strong>Location:</strong>
+                <strong>Location:</strong> {obj.rowData.AddressLine}
               </h5>
               <h5>
                 <strong>Officer Assigned:</strong>
