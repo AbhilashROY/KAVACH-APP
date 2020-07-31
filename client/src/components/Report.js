@@ -2,12 +2,58 @@ import React from "react";
 
 const Report = (props) => {
   const obj = JSON.parse(props.location.state.value);
+  // console.log(obj);
   const h5style = {
     marginTop: "5px",
     marginBottom: "5px",
     color: "#2c003e",
     fontSize: "18px",
   };
+  const metaData=obj.rowData.meta_data;
+  const data= [];
+  for(let media in metaData){
+    data.push({
+      id:media,
+      ...metaData[media]
+    });
+  }
+  const content = data.map(d=>{
+    if(d.filetype==='pdf'){
+      return(
+        <div key= {d.id}>
+            <p>Document Related to Crime</p>
+            <a href={d.filelink}
+            >{d.filename}</a>
+        </div>
+      )
+    }else if(d.filetype==='mp3'){
+      return(
+        <div key= {d.id}>
+          <p>Crime Scene Audio</p>
+          <audio controls src={d.filelink}>
+          </audio>
+        </div>
+      )
+    }else if(d.filetype==='mp4'){
+      return(
+        <div key= {d.id}>
+          <p>Crime Scene Video</p>
+          <video style={{height:"320px",width:'240px'}} controls 
+            src={d.filelink}
+          ></video>
+        </div>
+      )
+    }else{
+      return(
+        <div key= {d.id}>
+          <p>Crime Scene Image</p>
+          <img style={{height:"320px",width:'240px'}}
+            src={d.filelink}
+          ></img>
+        </div>
+      );
+    }
+  })
   return (
     <React.Fragment>
       <div id="wrapper2">
@@ -48,16 +94,26 @@ const Report = (props) => {
                 <p>{obj.rowData.description}</p>
               </h5>
               <div style={{ textAlign: "right" }}>
-                <button className="button-small1">Media</button>
+                {/* <button className="button-small1">Media</button> */}
                 <button className="button-small1">Progress</button>
               </div>
+              
+
             </div>
           </div>
+          
         </div>
       </div>
       <div id="wrapper3">
-        <div id="portfolio" className="container"></div>
+        <div ><h3 style={{textAlign:'center'}}>CRIME MEDIA</h3></div>
+        <br></br>
+        <hr></hr>
+        <br></br>
+        <div className="flex-container">      
+            {content}
+        </div>
       </div>
+      
     </React.Fragment>
   );
 };
