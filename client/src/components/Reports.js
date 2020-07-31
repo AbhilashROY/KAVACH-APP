@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchReports from "./SearchReports";
-import axios from 'axios';
+import axios from "axios";
 class Reports extends Component {
   constructor() {
     super();
@@ -23,8 +23,7 @@ class Reports extends Component {
     //       reports: result,
     //     });
     //   });
-    axios.get("https://jsonplaceholder.typicode.com/posts")
-    .then((result) => {
+    axios.get("https://jsonplaceholder.typicode.com/posts").then((result) => {
       // console.log(result);
       this.setState({
         isLoaded: true,
@@ -43,12 +42,8 @@ class Reports extends Component {
     });
     return (
       <React.Fragment>
-        <div id="wrapper2" className="profileNavBar">
-          <div className="container">
-            <div>
-              <h1>Reports</h1>
-            </div>
-          </div>
+        <div className="profileNavBar">
+          <h1>Reports</h1>
         </div>
 
         <div id="search-wrapper">
