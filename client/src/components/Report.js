@@ -93,9 +93,9 @@ const Report = (props) => {
                 <strong>Description: </strong>
                 <p>{obj.rowData.description}</p>
               </h5>
+              <input style = {{marginBottom: '0px', width: '97%'}} type = "text" placeholder = "Enter Your Progress"/>
               <div style={{ textAlign: "right" }}>
-                {/* <button className="button-small1">Media</button> */}
-                <button className="button-small1">Progress</button>
+                <button style={{marginTop: '10px'}} className="button-small1">Submit Progress</button>
               </div>
               
 
