@@ -27,13 +27,15 @@ const SearchReports = (props) => {
             <CardContent>
               <div className="contentReports">
                 <div className="spacing">
-                  <span style={{ paddingRight: `100px` }}>
+                  <div className="space">
                     <strong>TITLE: </strong> {props.rowData.crime_type}{" "}
-                  </span>
-                  <span style={{ paddingRight: `40px` }}>
+                  </div>
+                  <div className="space">
                     <strong>REPORTED ON: </strong> {props.rowData.timestamp}
-                  </span>
-                  <strong>STATUS: </strong> {props.rowData.report_status}
+                  </div>
+                  <div className="space">
+                    <strong>STATUS: </strong> {props.rowData.report_status}
+                  </div>
                 </div>
                 <div className="spacing">
                   <strong>DESCRIPTION: </strong> {props.rowData.description}
