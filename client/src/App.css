@@ -685,6 +685,20 @@ input:focus {
   float: left;
 }
 
+.flex-container {
+  margin: 0px auto;
+  width: 1200px;
+  box-shadow: 3px 5px 10px 4px #6a4670;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.flex-container div {
+  padding: 20px;
+  box-sizing: border-box;
+}
 /*********************************************************************************/
 /* Dashboard                                                    */
 /*********************************************************************************/
@@ -696,6 +710,14 @@ svg {
   border: 0.2px solid rgb(223, 221, 221);
 }
 
+.Loader svg {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border: none;
+}
+
 svg .state {
   stroke: white;
   stroke-width: 1px;
@@ -705,6 +727,14 @@ svg .state:hover {
   stroke: white;
   stroke-width: 2px;
   cursor: pointer;
+}
+
+.Loader svg {
+  display: block;
+  width: 100%;
+  height: 600px;
+  background-color: #fff;
+  border: none;
 }
 
 #selectState {
