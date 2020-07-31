@@ -680,7 +680,20 @@ input:focus {
   color: white;
   padding: 10px 20px 0px 20px;
 }
-
+.flex-container {
+  margin: 0px auto;
+  width: 1200px;
+  box-shadow: 3px 5px 10px 4px #6a4670;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.flex-container div {
+  padding: 20px;
+  box-sizing: border-box;
+}
 /*********************************************************************************/
 /* Dashboard                                                    */
 /*********************************************************************************/
