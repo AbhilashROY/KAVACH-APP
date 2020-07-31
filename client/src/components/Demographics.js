@@ -17,7 +17,12 @@ const Demographics = (props) => {
               <option value="Kidnapping/Abduction">Kidnapping/Abduction</option>
               <option value="Robbery">Robbery</option>
               <option value="Rape">Rape</option>
-              <option value="Sexual Assault">Sexual Assault</option>
+              <option value="Accident">Accident</option>
+              <option value="Theft">Theft</option>
+              <option value="Riot">Riot</option>
+              <option value="Eve Teasing">Eve Teasing</option>
+              <option value="Domestic Violence">Domestic Violence</option>
+              <option value="Fight">Fight</option>
               <option value="Drug/Narcotic Violations">
                 Drug/Narcotic Violations
               </option>

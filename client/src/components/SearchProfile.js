@@ -22,7 +22,7 @@ const SearchProfile = (props) => {
         style={{ margin: `20px 80px 20px 80px` }}
         onClick={() => props.handleClick(props.rowData)}
       >
-        <div className="root">
+        <div className="profileRoot">
           <img src={image1} style={{ width: `150px` }} />
           <div>
             <CardContent className="contentProfile">
