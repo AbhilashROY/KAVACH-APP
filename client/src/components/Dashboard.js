@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import LineDemo from './LineDemo';
 import "../App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -53,8 +52,9 @@ const Menu = styled.ul`
 const Nav = styled.nav`
   padding: 10px;
   display: inline-block;
+  text-align: center;
   background-color: #4a4349;
-  color: black;
+  color: white;
   width: 100%;
   transition: 0.5s ease-in-out;
 `;
@@ -62,14 +62,15 @@ const Nav = styled.nav`
 function Dashboard() {
   const [property, setProperty] = useState("population");
   const [open, setOpen] = useState(false);
-  const styles = {
-    fontFamily: 'sans-serif',
-    textAlign: 'center',
-  };
-  
+ 
+  const ulstyle = {
+    display: 'inline-flex',
+    margin: '0',
+  }
+
   return (
     <React.Fragment>
-      <div id="wrapper2">
+      {/* <div id="wrapper2">
         <Menu open={open}>
           <Link to="/predictions" style={{ textDecoration: "none" }}>
             <li className="menuList">Predictions</li>
@@ -90,11 +91,22 @@ function Dashboard() {
             <div />
           </StyledBurger>
         </Nav>
+      </div> */}
+      <div  id="wrapper2">
+        <Nav>
+          <ul style = {ulstyle}>
+            <Link to="/predictions" style={{ textDecoration: "none" }}>
+                <li className="menuList">Predictions</li>
+            </Link>
+            <Link to="/heatmap" style={{ textDecoration: "none" }}>
+                <li className="menuList">Heatmap</li>
+            </Link>     
+          </ul>
+        </Nav>
       </div>
+
       <GeoChart data={data} property={property} />
-      <div style={styles}>
-        <LineDemo/>
-      </div>
+      
     </React.Fragment>
   );
 }
