@@ -2,7 +2,7 @@ import React from "react";
 import InfoCards from "./InfoCards";
 import "../App.css";
 import "../fonts.css";
-import HeatMap from './HeatMap';
+import HeatMap from "./HeatMap";
 function Home() {
   return (
     <React.Fragment>

@@ -1,5 +1,5 @@
 import React from "react";
-import image1 from "../images/cop_lady.jpg";
+import image1 from "../images/cop3.jpg";
 
 const Profile = (props) => {
   const obj = JSON.parse(props.location.state.value);
@@ -9,9 +9,9 @@ const Profile = (props) => {
         <div id="welcome" className="container">
           <div id="profile">
             <div className="column1">
-              <img src={image1} />
+              <img src={image1} style={{ width: `250px` }} />
             </div>
-            <div className="column2">
+            <div className="column2" style={{ paddingTop: `30px` }}>
               <h2>
                 <strong>Name: </strong>
                 {obj.rowData.first_name} {obj.rowData.last_name}

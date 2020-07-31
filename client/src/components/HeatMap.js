@@ -1,17 +1,17 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 // import isEmpty from 'lodash.isempty';
 
 // examples:
-import GoogleMap from './GoogleMap';
-
+import GoogleMap from "./GoogleMap";
 
 class Heatmap extends Component {
-  
   state = {
-    places: [{
-      lat: 37,
-      lng: 127
-    }]
+    places: [
+      {
+        lat: 37,
+        lng: 127,
+      },
+    ],
   };
 
   componentDidMount() {
@@ -22,7 +22,7 @@ class Heatmap extends Component {
   }
 
   render() {
-    const data = this.state.places.map(place => ({
+    const data = this.state.places.map((place) => ({
       lat: place.lat,
       lng: place.lng,
       weight: Math.floor(Math.random() * Math.floor(5)),
@@ -37,17 +37,17 @@ class Heatmap extends Component {
 
     return (
       <Fragment>
-        { (
+        {
           <GoogleMap
             defaultZoom={13}
-            defaultCenter={{lat: 37,lng: 127}}
+            defaultCenter={{ lat: 37, lng: 127 }}
             heatmap={heatmapData}
             bootstrapURLKeys={{
               key: process.env.REACT_APP_MAP_KEY,
-              libraries: ['visualization'],
+              libraries: ["visualization"],
             }}
           />
-        )}
+        }
       </Fragment>
     );
   }
