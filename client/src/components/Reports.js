@@ -51,7 +51,6 @@ class Reports extends Component {
   }
 
   render() {
-    console.log(90);
     console.log(this.state.reports);
     let filteredReports = this.state.reports.filter((report) => {
       return report.timestamp.toString().indexOf(this.state.search) !== -1;

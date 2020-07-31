@@ -713,7 +713,8 @@ svg .state:hover {
 }
 
 svg .label1,
-.label2 {
+.label2,
+.label4 {
   font-weight: bold;
 }
 
