@@ -12,7 +12,7 @@ app.use(cors());
 app.get('/',(req,res)=>{
     var options = {
         mode: 'text',
-        pythonPath: 'C:\\Users\\user\\Anaconda3\\python',
+        pythonPath: 'C:\\python\\Python36\\python',
         // pythonOptions: ['-u'],
         scriptPath: './public/',
         args: ["2015","ASSAULT ON WOMEN WITH INTENT TO OUTRAGE HER MODESTY","Maharashtra","women"]

@@ -216,7 +216,8 @@ ul.contact li a {
 .button-small {
   display: inline-block;
   margin: 2em 0em 2em 2em;
-  height: 50px;
+  text-align: center;
+  height: 40px;
   width: 150px;
   padding: 5px;
   background: #6c2a6a;
