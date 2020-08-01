@@ -20,9 +20,9 @@ const SearchReports = (props) => {
     >
       <Card style={{ margin: `20px 80px 20px 80px` }}>
         <div className="reportRoot">
-          <span className="reportHead">
+          <div className="reportHead">
             <span className="icon icon-list" style={{ float: `left` }} />
-          </span>
+          </div>
           <span>
             <CardContent>
               <div className="contentReports">
