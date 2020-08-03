@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Loader from "./Loader";
 import axios from "axios";
 import { Polar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 export default class LineDemo extends Component {
   constructor(props) {
@@ -68,6 +70,8 @@ export default class LineDemo extends Component {
           <div>
             <h2>ASSAULT ON WOMEN</h2>
             <Polar ref="chart" data={this.state.Data} />
+            <Line ref="chart" data={this.state.Data} />
+            <Bar  ref="chart" data={this.state.Data} />
           </div>
         )}
       </div>
